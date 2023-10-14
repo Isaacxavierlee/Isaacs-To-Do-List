@@ -1,0 +1,152 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #153677, #4e085f);
+    padding: 10px;
+}
+
+/* Define a @keyframes animation for the border color */
+@keyframes borderAnimation {
+    0% {
+        border-color: #FF0000; /* Start with red border */
+    }
+    25% {
+        border-color: #00FF00; /* Change to green at 25% */
+    }
+    50% {
+        border-color: #0000FF; /* Change to blue at 50% */
+    }
+    75% {
+        border-color: #FFFF00; /* Change to yellow at 75% */
+    }
+    100% {
+        border-color: #FF00FF; /* End with magenta at 100% */
+    }
+}
+
+/* Apply the animation to the .todo-app element */
+.todo-app {
+    width: 100%;
+    max-width: 540px;
+    background: #fff;
+    margin: 100px auto 20px;
+    padding: 40px 30px 70px;
+    border-radius: 10px;
+    border: 2px solid transparent; /* Initial border style */
+    animation: borderAnimation 10s linear infinite; /* Apply the animation */
+}
+.todo-app h2 {
+    color: #002765;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.todo-app h2 img {
+    width: 30px;
+    margin-left: 10px;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #edeef0;
+    border-radius: 30px;
+    padding-left: 20px;
+    margin-bottom: 25px;
+}
+
+input {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+}
+
+button {
+    border: none;
+    outline: none;
+    padding: 16px 50px;
+    background: #ff5945;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 40px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    font-size: 17px;
+    padding: 12px 8px 12px 50px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+  max-width: 80%; /* Adjust the maximum width as needed */
+    word-wrap: break-word; /* Enable text wrapping */
+  padding-right: 50px;
+}
+
+ul li::before {
+    content: '';
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background-image: url(./unchecked.png);
+    background-size: cover;
+    background-position: center;
+    top: 12px;
+    left: 8px;
+}
+
+ul li.checked {
+    color: #555;
+    text-decoration: line-through;
+}
+
+ul li.checked::before {
+    background-image: url(./checked.png); /* Use the image for checked items */
+}
+
+ul li span{
+position: 5px;
+top: 50%;
+width: 40px;
+height: 40px;
+transform: translateY(-50%);
+font-size: 22px;
+color: #555;
+line-height: 40px;
+text-align: center;
+background: transparent;
+cursor: progress;
+
+}
+
+ul li span:hover{
+background: #edeef0;
+  
+}
+
+/* Your existing CSS styles here */
+
+.created-by {
+    text-align: center;
+    color: #777;
+    margin-top: 20px;
+    font-size: 14px;
+}
+
